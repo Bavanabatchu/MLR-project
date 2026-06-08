@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Ultra&display=swap" rel="stylesheet">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- css -->
+    <link rel="stylesheet" href="static\css\style.css">
+    <title>Flask</title>
+</head>
+<body bgcolor="sky blue">
+<h1>Student performance</h1>
+    <form action="/predict" method="POST">
+        <input
+            type="number"
+            step="any"
+            name="Hours Studied"
+            placeholder="Enter hours studied"
+            required>
+        <br>
+        <input
+            type="number"
+            step="any"
+            name="Previous Scores"
+            placeholder="Enter previous score"
+            required>
+
+        <br>
+        <br>
+
+        <select name="Extracurricular Activities" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+
+        <input
+            type="number"
+            step="any"
+            name="Sleep Hours"
+            placeholder="Enter sleep hours"
+            required>
+
+        <br>
+        <br>
+        <input
+            type="number"
+            step="any"
+            name="Sample Question Papers Practiced"
+            placeholder="Enter Sample Question Papers Practiced"
+            required>
+        <br><br>
+
+        <button type="submit">
+            Predict Profit
+        </button>
+
+    </form>
+<h2>Prediction: {{ test_pred }}</h2>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</div>
+</body>
+</html>
